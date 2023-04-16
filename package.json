@@ -19,9 +19,12 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@nestjs/common": "^9.0.0",
+    "@nestjs/common": "^9.4.0",
     "@nestjs/core": "^9.0.5",
+    "@nestjs/mongoose": "^9.2.2",
     "@nestjs/platform-express": "^9.0.0",
+    "@nestjs/typeorm": "^9.0.1",
+    "mongoose": "^7.0.3",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.5"
   },
@@ -31,6 +34,8 @@
     "@nestjs/testing": "^9.0.0",
     "@types/express": "^4.17.13",
     "@types/jest": "^28.1.4",
+    "@types/mongodb-memory-server": "^2.3.0",
+    "@types/mongoose": "^5.11.97",
     "@types/node": "^18.0.3",
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
@@ -39,6 +44,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "jest": "^28.1.2",
+    "mongodb-memory-server": "^8.12.2",
     "prettier": "^2.7.1",
     "source-map-support": "^0.5.21",
     "supertest": "^6.2.4",

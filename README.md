@@ -1,73 +1,78 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+A. Project: Task Manager
+This project is a task management system built with NestJS. It provides a REST API to manage a collection of tasks, each with a unique identifier, title, description, status, creation date, and update date. The application uses NestJS modules, providers, and decorators to implement the feature and includes unit and integration tests for adequate test coverage.
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+B. Features:
+Create a new task
+Retrieve a task by its id
+Delete a task by its id
 
-## Description
+Project Structure:
+src/
+├─ tasks/
+│   ├─ tasks.controller.ts
+│   ├─ tasks.service.ts
+│   ├─ tasks.module.ts
+│   ├─ dto/
+│   │   └─ create-task.dto.ts
+│   ├─ schemas/
+│   │   └─ task.model.ts
+│   ├─ unit_test/
+│   │   ├─ tasks.controller.spec.ts
+│   │   ├─ tasks.module.spec.ts
+│   │   ├─ tasks.service.spec.ts
+│   │   └─ task.model.spec.ts
+├─ app.module.ts
+└─ main.ts
+test/
+└─ tasks.e2e-spec.ts
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+tasks/tasks.controller.ts
+This file contains the TasksController class, which is responsible for handling HTTP requests and routing them to the appropriate service methods.
 
-## Installation
+tasks/tasks.service.ts
+This file contains the TasksService class, which provides the core business logic for managing tasks, such as creating, retrieving, and deleting tasks.
 
-```bash
-$ npm install
-```
+tasks/tasks.module.ts
+This file defines the TasksModule, which encapsulates the task management feature and its dependencies.
 
-## Running the app
+tasks/dto/create-task.dto.ts
+This file contains the CreateTaskDto class, which is used to validate incoming data when creating a new task.
 
-```bash
-# development
-$ npm run start
+tasks/schemas/task.model.ts
+This file contains the Task model, which defines the schema for tasks.
 
-# watch mode
-$ npm run start:dev
+Unit Tests
+tasks/unit_test/tasks.controller.spec.ts: Contains unit tests for the TasksController.
+tasks/unit_test/tasks.module.spec.ts: Contains unit tests for the TasksModule.
+tasks/unit_test/tasks.service.spec.ts: Contains unit tests for the TasksService.
+tasks/unit_test/task.model.spec.ts: Contains unit tests for the Task model.
 
-# production mode
-$ npm run start:prod
-```
+Integration Tests
+test/tasks.e2e-spec.ts: Contains end-to-end (e2e) tests that test the application as a whole, including the REST API.
 
-## Test
+C. Installation
+1. Ensure you have Node.js and npm installed.
+2. Clone the repository:
+git clone https://github.com/anan5255/typescript-starter.git
+3. Navigate to the project directory:
+cd typescript-starter
+4. Install the required dependencies:
+npm install
 
-```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
+D. Running the Application
+To start the application, run the following command:
+npm run start
 
-# test coverage
-$ npm run test:cov
-```
+The REST API will be available at http://localhost:3000.
 
-## Support
+E. Running Tests
+To run the unit tests, execute the following command:
+npm run test
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+To run the integration tests, execute the following command:
+npm run test:e2e
 
-## Stay in touch
+License
+This project is licensed under the MIT License(https://github.com/nestjs/nest/blob/master/LICENSE).
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-  Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
