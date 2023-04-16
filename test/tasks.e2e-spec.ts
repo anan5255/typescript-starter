@@ -12,7 +12,7 @@ describe('TasksController (e2e)', () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [
         TasksModule,
-        MongooseModule.forRoot('mongodb+srv://zhuoyangzhang:Offer20201998@zhuoyang.z0w8guj.mongodb.net/test', {
+        MongooseModule.forRoot('mongodb://localhost/nest-tasks', {
           useNewUrlParser: true,
           useUnifiedTopology: true,
         }),
