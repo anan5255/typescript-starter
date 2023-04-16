@@ -58,6 +58,7 @@ git clone https://github.com/anan5255/typescript-starter.git
 cd typescript-starter
 4. Install the required dependencies:
 npm install
+5. Please use your own MongoDB to replace <mongodb://localhost/nest-tasks>
 
 
 D. Running the Application
